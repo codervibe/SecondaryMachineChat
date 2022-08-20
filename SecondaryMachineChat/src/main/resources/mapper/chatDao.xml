@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codervibe.secondarymachinechat.Mapper.ChatMapper">
+    <!--查询问题的回答-->
+    <select id="getAnswerbyquestion" parameterType="Chat" resultType="Chat">
+        select answer
+        from tb_chat
+        where question = #{question}
+    </select>
+
+</mapper>
